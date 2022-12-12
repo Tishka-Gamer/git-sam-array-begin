@@ -1,4 +1,5 @@
 <pre><?php 
+//Сумина
 // 1.	Создайте массив arrRange и заполните его числами в промежутке [-50; 50] с шагом=8.
 // Перемешайте элементы этого массива
     $arrRange = range(-50, 50, 8);
@@ -12,11 +13,15 @@ echo(implode("**", $arrRange) . '<br>');
 
 // 3.	Удалите четные элементы этого массива, определите количество оставшихся
 
-$otric = array_splice($arr, function($item){
-        if($item % 2 == 0);
-    });
-print_r($otric);
+// $otric = array_splice($arrRange, fn($item) => !($item%2 == 0));
+//print_r($otric);
 // 4.	Замените все отрицательные значения положительными
+foreach($arrRange as $item){
+    if($item<0){
+        $item = $item*-1;
+    }
+}
+print_r($arrRange);
 // 5.	Создайте новый массив arrRandom и заполните его на 20 элементов случайными числами в промежутке 
 // [-5; 10].
 $arrRandom = [];
